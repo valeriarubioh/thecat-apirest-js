@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cat API</title>
+  <script src = "js/script.js" defer></script>
+  <link rel = "stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Kittens Page</h1>
+  <span id="error"></span>
+
+  <section id="randomMichis">
+    <h2>Random Cats</h2>
+    <div class="cards">
+      <article>
+        <img id="img1" alt="random-kitten">
+        <button class="favorites" id="btn1">
+          Save kitten as favorite
+        </button>
+      </article>
+
+      <article>
+        <img id="img2" alt="random-kitten">
+        <button class="favorites" id="btn2">
+          Save kitten as favorite
+        </button>
+      </article>
+    </div>
+    <button onclick="loadRandomMichis()" >Reload</button>
+  </section>
+
+  <section id="favoriteMichis" class="favoriteMichis">
+    <h2>Favorite Kitties</h2>
+
+    <article>
+      <img id="img1" alt="random-fav-kitten">
+      <button>Remove kitten from favorite</button>
+    </article>
+  </section>
+
+  <section id="uploadingMichi" class="title-subitles-upload">
+    <h2>Upload your kitten photo</h2>
+
+    <form id="uploadingForm">
+      <input id="file" type="file" name="file" />
+      <br />
+      <button
+        type="button"
+        onclick="uploadMichiPhoto()"
+        class="button-upload"
+      >
+        Upload kitten photo
+      </button>
+    </form>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
